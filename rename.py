@@ -12,8 +12,8 @@ files = next(os.walk(path))[2]
 # print(path)
 for i, file in enumerate(files):
     try:
-        nama_baru = file.replace("y2mate.com - ", "")
-        os.rename(os.path.join(path, file), os.path.join(path,nama_baru))
+        new_name = file.replace("y2mate.com - ", "")
+        os.rename(os.path.join(path, file), os.path.join(path,new_name))
     except OSError as e:
         print("file " + file + " is being used. ")
     if "y2mate.com - " in file: print("Process done!")
